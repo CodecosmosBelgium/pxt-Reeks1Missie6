@@ -1,18 +1,3 @@
-enum Seeds {
-    //% block="Seed"
-    //% block.loc.nl="Zaadjes"
-    Seed,
-    //% block="Flower"
-    //% block.loc.nl="Bloem"
-    Flower,
-    //% block="Sunflower"
-    //% block.loc.nl="Zonnebloem"
-    Sunflower,
-    //% block="Endflower"
-    //% block.loc.nl="Endbloem"
-    Endflower,
-}
-
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
     //% block="startingPosition x:$x y:$y z:$z"
@@ -20,13 +5,19 @@ namespace CodeCosmos {
     export function startingPosition(x:number, y:number, z:number) {
         agent.teleport(pos(x, y, z), SOUTH)
         agent.setItem(SEEDS, 64, 1);
+        correctPositions = [];
+    }
+
+    //% block="plant"
+    //% block.loc.nl="plant"
+    export function placeLevel1() {
+        level1Check();
     }
 
     //% block="plant $seed"
-    //% block.loc.nl="plant $seed"
-    export function placeLevel1(seed:Seeds) {
-        agent.setSlot(1)
-        agent.place(DOWN)
+    //% block.loc.nl="plant $plant"
+    export function placeLevel2(seed: Seeds) {
+        level2Check(seed);
     }
 
     //% block="giveRedstone"
