@@ -15,50 +15,27 @@ enum Seeds {
 
 let correctPositions: Position[] = [];
 
- function level1Check() {
-     agent.setSlot(1)
-     agent.place(DOWN)
-     const detectPostion = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
 
-     if (correctPositions.indexOf(detectPostion) === -1) {
-         if (blocks.testForBlock(FARMLAND, detectPostion)) {
-             correctPositions.push(detectPostion)
-
-         } else {
-             blocks.place(RED_CONCRETE, detectPostion);
-         }
-
-     }
-
-
-     if (correctPositions.length == 20) {
-         player.execute(
-             "function levels/level1/levelup"
-         )
-     }
-}
-
-function level2Check(seed:Seeds) {
-    agent.setSlot(1)
+function levelCheck(seed: Seeds) {
+    agent.setSlot(seed + 1)
     agent.place(DOWN)
     const detectPostion = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
 
     if (correctPositions.indexOf(detectPostion) === -1) {
         if (blocks.testForBlock(FARMLAND, detectPostion) && seed === Seeds.Seed) {
             correctPositions.push(detectPostion)
-
-        } else if (blocks.testForBlock(SAND, detectPostion) && seed === Seeds.Flower) {
-
+        } else if (blocks.testForBlock(DIRT, detectPostion) && seed === Seeds.Flower) {
+            correctPositions.push(detectPostion)
+        } else if (blocks.testForBlock(COARSE_DIRT, detectPostion) && seed === Seeds.Sunflower) {
+            correctPositions.push(detectPostion)
+        } else if (blocks.testForBlock(ENDSTONE, detectPostion) && seed === Seeds.Endflower) {
+            correctPositions.push(detectPostion)
         } else {
             blocks.place(RED_CONCRETE, detectPostion);
         }
 
-    } 
-
-
-    if (correctPositions.length == 20) {
-        player.execute(
-            "function levels/level1/levelup"
-        )
     }
+
+
+player.execute(`scoreboard players set @a level_check ${correctPositions.length}`)
 }

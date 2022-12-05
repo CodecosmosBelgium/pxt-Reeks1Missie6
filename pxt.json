@@ -7,18 +7,18 @@
         "builder": "*"
     },
     "files": [
-        "README.md",
         "main.blocks",
         "main.ts",
         "custom_functions.ts",
-        "levels_check.ts"
+        "levels_check.ts",
+        "t_level1-3.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "public": true,
     "targetVersions": {
-        "target": "1.6.27",
+        "target": "1.6.30",
         "targetId": "minecraft"
     },
     "supportedTargets": [
