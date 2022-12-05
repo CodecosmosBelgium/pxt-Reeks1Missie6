@@ -37,5 +37,6 @@ function levelCheck(seed: Seeds) {
     }
 
 
-player.execute(`scoreboard players set @a level_check ${correctPositions.length}`)
+    player.execute(`scoreboard players set @a level_check ${correctPositions.length}`)
+    player.execute(`function levels/levelUp`)
 }

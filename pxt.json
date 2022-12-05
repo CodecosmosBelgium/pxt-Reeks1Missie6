@@ -11,7 +11,8 @@
         "main.ts",
         "custom_functions.ts",
         "levels_check.ts",
-        "t_level1-3.md"
+        "t_level1-3.md",
+        "t_no_exercise.md"
     ],
     "testFiles": [
         "test.ts"
