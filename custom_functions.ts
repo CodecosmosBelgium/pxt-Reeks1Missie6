@@ -15,6 +15,7 @@ namespace CodeCosmos {
     //% block="plant $seed"
     //% block.loc.nl="plant $plant"
     export function place(seed: Seeds) {
+        agent.setItem(SEEDS, 64, 1);
         levelCheck(seed);
     }
 
