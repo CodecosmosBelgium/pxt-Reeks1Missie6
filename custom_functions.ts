@@ -18,11 +18,9 @@ namespace CodeCosmos {
         levelCheck(seed);
     }
 
-    //% block="giveRedstone"
-    //% block.loc.nl="geefRedstone"
-    export function giveRedstone() {
-        if (agent.getItemCount(1) < 10) {
-            agent.setItem(REDSTONE_WIRE, 64, 1)
-        }
+    //% block="position below agent"
+    //% block.loc.nl="positie onder agent"
+    export function positionBelowAgent() {
+        return world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
     }
 }
