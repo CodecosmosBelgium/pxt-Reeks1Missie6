@@ -37,7 +37,9 @@ function levelCheck(seed: Seeds) {
         } else if (blocks.testForBlock(CHORUS_PLANT, detectPostion) && seed === Seeds.ChorusFlower) {
             correctPositions.push(detectPostion)
         } else {
+            const particlePosition = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) + 1, agent.getPosition().getValue(Axis.Z))
             blocks.place(RED_CONCRETE, detectPostion);
+            player.execute(`execute @c ~ ~ ~ particle rwm:barrier ${particlePosition.getValue(Axis.Y)} ${particlePosition.getValue(Axis.Z)}`)
         }
 
     }
