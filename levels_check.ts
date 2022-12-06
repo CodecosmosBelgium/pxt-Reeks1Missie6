@@ -8,9 +8,12 @@ enum Seeds {
     //% block="Sunflower"
     //% block.loc.nl="Zonnebloem"
     Sunflower,
-    //% block="Endflower"
-    //% block.loc.nl="Endbloem"
-    Endflower,
+    //% block="Chorus flower"
+    //% block.loc.nl="Chorus Bloem"
+    ChorusFlower,
+    //% block="Chorus plant"
+    //% block.loc.nl="Chorus plant"
+    ChorusPlant,
 }
 
 let correctPositions: Position[] = [];
@@ -28,7 +31,9 @@ function levelCheck(seed: Seeds) {
             correctPositions.push(detectPostion)
         } else if (blocks.testForBlock(COARSE_DIRT, detectPostion) && seed === Seeds.Sunflower) {
             correctPositions.push(detectPostion)
-        } else if (blocks.testForBlock(ENDSTONE, detectPostion) && seed === Seeds.Endflower) {
+        } else if (blocks.testForBlock(ENDSTONE, detectPostion) && seed === Seeds.ChorusPlant) {
+            correctPositions.push(detectPostion)
+        } else if (blocks.testForBlock(CHORUS_PLANT, detectPostion) && seed === Seeds.ChorusFlower) {
             correctPositions.push(detectPostion)
         } else {
             blocks.place(RED_CONCRETE, detectPostion);
