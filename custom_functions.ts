@@ -8,6 +8,7 @@ namespace CodeCosmos {
         agent.setItem(YELLOW_FLOWER, 64, 2);
         agent.setItem(SUNFLOWER, 64, 3);
         agent.setItem(CHORUS_FLOWER, 64, 4);
+        agent.setItem(CHORUS_PLANT, 64, 5);
         player.execute("function levels/startingPosition")
         correctPositions = [];
     }

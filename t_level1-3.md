@@ -15,7 +15,7 @@ if (blocks.testForBlock(GRASS, CodeCosmos.positionBelowAgent())) {}
 ```
 ```template
 player.onChat("level1", function () {
-volgendeLijn();
+volgendeLijn()
 })
 function volgendeLijn () {
     agent.move(LEFT, 2)
