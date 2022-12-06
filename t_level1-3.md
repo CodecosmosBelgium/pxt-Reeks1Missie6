@@ -10,12 +10,12 @@ player.onChat("run", function () {
 CodeCosmos.startingPosition(world(0, 0, 0))
 CodeCosmos.place(Seeds.Seed)
 if (blocks.testForBlock(GRASS, CodeCosmos.positionBelowAgent())) {}
-volgendeLijn();
+
 })
 ```
 ```template
 player.onChat("level1", function () {
-
+volgendeLijn();
 })
 function volgendeLijn () {
     agent.move(LEFT, 2)
