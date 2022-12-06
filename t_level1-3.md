@@ -15,6 +15,7 @@ if (blocks.testForBlock(GRASS, CodeCosmos.positionBelowAgent())) {}
 ```
 ```template
 player.onChat("level1", function () {
+CodeCosmos.startingPosition(world(0, 0, 0))
 volgendeLijn()
 })
 function volgendeLijn () {
