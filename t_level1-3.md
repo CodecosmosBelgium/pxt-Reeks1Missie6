@@ -1,6 +1,6 @@
 ### @hideIteration true
 ### @flyoutOnly true
-# Missie 4 (v1.0)
+# Missie 6 (v1.0)
 ```blocks
 player.onChat("run", function () {
     for (let index = 0; index < 4; index++) {
