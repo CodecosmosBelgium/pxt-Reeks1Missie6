@@ -23,6 +23,7 @@ function levelCheck(seed: Seeds) {
     agent.setSlot(seed + 1)
     agent.place(DOWN)
     const detectPostion = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
+    const detectPostionChorus = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 2, agent.getPosition().getValue(Axis.Z))
 
     if (correctPositions.indexOf(detectPostion) === -1) {
         if (blocks.testForBlock(FARMLAND, detectPostion) && seed === Seeds.Seed) {
@@ -31,8 +32,8 @@ function levelCheck(seed: Seeds) {
             correctPositions.push(detectPostion)
         } else if (blocks.testForBlock(COARSE_DIRT, detectPostion) && seed === Seeds.Sunflower) {
             correctPositions.push(detectPostion)
-        } else if (blocks.testForBlock(ENDSTONE, detectPostion) && seed === Seeds.ChorusPlant) {
-            correctPositions.push(detectPostion)
+        } else if (blocks.testForBlock(ENDSTONE, detectPostionChorus) && seed === Seeds.ChorusPlant) {
+            correctPositions.push(detectPostionChorus)
         } else if (blocks.testForBlock(CHORUS_PLANT, detectPostion) && seed === Seeds.ChorusFlower) {
             correctPositions.push(detectPostion)
         } else {
