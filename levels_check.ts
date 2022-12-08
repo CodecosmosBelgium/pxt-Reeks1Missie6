@@ -5,9 +5,9 @@ enum Seeds {
     //% block="Flower"
     //% block.loc.nl="Bloem"
     Flower,
-    //% block="Sunflower"
-    //% block.loc.nl="Zonnebloem"
-    Sunflower,
+    //% block="Pumpkin"
+    //% block.loc.nl="Pompoen"
+    Pumpkin,
     //% block="Chorus flower"
     //% block.loc.nl="Chorus Bloem"
     ChorusFlower,
@@ -30,7 +30,7 @@ function levelCheck(seed: Seeds) {
             correctPositions.push(detectPostion)
         } else if (blocks.testForBlock(DIRT, detectPostion) && seed === Seeds.Flower) {
             correctPositions.push(detectPostion)
-        } else if (blocks.testForBlock(COARSE_DIRT, detectPostion) && seed === Seeds.Sunflower) {
+        } else if (blocks.testForBlock(SAND, detectPostion) && seed === Seeds.Pumpkin) {
             correctPositions.push(detectPostion)
         } else if (blocks.testForBlock(ENDSTONE, detectPostionChorus) && seed === Seeds.ChorusPlant) {
             correctPositions.push(detectPostionChorus)
