@@ -30,7 +30,7 @@ function levelCheck(seed: Seeds) {
             correctPositions.push(detectPostion)
         } else if (blocks.testForBlock(DIRT, detectPostion) && seed === Seeds.Flower) {
             correctPositions.push(detectPostion)
-        } else if (blocks.testForBlock(SAND, detectPostion) && seed === Seeds.Pumpkin) {
+        } else if (blocks.testForBlock(SAND, detectPostionChorus) && seed === Seeds.Pumpkin) {
             correctPositions.push(detectPostion)
         } else if (blocks.testForBlock(ENDSTONE, detectPostionChorus) && seed === Seeds.ChorusPlant) {
             correctPositions.push(detectPostionChorus)
