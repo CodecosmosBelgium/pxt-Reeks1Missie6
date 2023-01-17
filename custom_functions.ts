@@ -1,7 +1,6 @@
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
-    //% block="startingPosition position:$position"
-    //% block.loc.nl="zetKlaar positie:$position"
+    //% block="zet agent klaar op $position""
     export function startingPosition(position:Position) {
         agent.teleport(position, SOUTH)
         agent.setItem(SEEDS, 64, 1);
@@ -14,14 +13,12 @@ namespace CodeCosmos {
     }
 
     //% block="plant $seed"
-    //% block.loc.nl="plant $plant"
     export function place(seed: Seeds) {
         agent.setItem(SEEDS, 64, 1);
         levelCheck(seed);
     }
 
-    //% block="position below agent"
-    //% block.loc.nl="positie onder agent"
+    //% block="positie onder agent"
     export function positionBelowAgent() {
         return world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
     }

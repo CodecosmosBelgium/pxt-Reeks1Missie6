@@ -41,7 +41,6 @@ function levelCheck(seed: Seeds) {
             blocks.place(RED_CONCRETE, detectPostion);
             return;
         }
-
     }
 
     player.execute(`execute @c ~ ~ ~ particle rwm:checkmark ~ ~1 ~`)
