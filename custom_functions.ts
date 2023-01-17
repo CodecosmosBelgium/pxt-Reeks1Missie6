@@ -1,6 +1,6 @@
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
-    //% block="zet agent klaar op $position""
+    //% block="zet agent klaar op $position"
     export function startingPosition(position:Position) {
         agent.teleport(position, SOUTH)
         agent.setItem(SEEDS, 64, 1);
