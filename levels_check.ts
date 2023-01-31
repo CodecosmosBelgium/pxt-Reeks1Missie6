@@ -1,14 +1,14 @@
 enum Seeds {
-    //% block="Seed"
+    //% block="Zaadje"
     //% block.loc.nl="Zaadjes"
     Seed,
-    //% block="Flower"
+    //% block="Bloem"
     //% block.loc.nl="Bloem"
     Flower,
-    //% block="Pumpkin"
+    //% block="Pompoen"
     //% block.loc.nl="Pompoen"
     Pumpkin,
-    //% block="Chorus flower"
+    //% block="Chorus bloem"
     //% block.loc.nl="Chorus Bloem"
     ChorusFlower,
     //% block="Chorus plant"
