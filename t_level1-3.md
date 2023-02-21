@@ -16,12 +16,7 @@ if (blocks.testForBlock(GRASS, CodeCosmos.positionBelowAgent())) {}
 ```template
 player.onChat("level1", function () {
 CodeCosmos.startingPosition(world(0, 0, 0))
-volgendeLijn()
 })
-function volgendeLijn () {
-    agent.move(LEFT, 2)
-    agent.move(BACK, 11)
-}
 ```
 ## Velden beplanten
 Volg de instructies op het leerplatform om de opdracht op te lossen.

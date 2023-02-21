@@ -18,6 +18,12 @@ namespace CodeCosmos {
         levelCheck(seed);
     }
 
+    //% block="volgende lijn"
+    export function nextLine() {
+        agent.move(LEFT, 2)
+        agent.move(BACK, 12)
+    }
+
     //% block="positie onder agent"
     export function positionBelowAgent() {
         return world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
