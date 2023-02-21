@@ -5,7 +5,7 @@
 player.onChat("run", function () {
     for (let index = 0; index < 4; index++) {
         agent.move(FORWARD, 1)
-        agent.turn(LEFT_TURN)
+        CodeCosmos.nextLine()
     }
 CodeCosmos.startingPosition(world(0, 0, 0))
 CodeCosmos.place(Seeds.Seed)
