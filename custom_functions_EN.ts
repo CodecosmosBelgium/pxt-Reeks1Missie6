@@ -1,7 +1,7 @@
 //% color=190 weight=100 block="CodeCosmos"
-namespace CodeCosmos {
-    //% block="zet agent klaar op $position"
-    export function startingPosition(position:Position) {
+namespace CodeCosmosEN {
+    //% block="startingPosition $position"
+    export function startingPosition(position: Position) {
         agent.teleport(position, SOUTH)
         agent.setItem(SEEDS, 64, 1);
         agent.setItem(YELLOW_FLOWER, 64, 2);
@@ -13,31 +13,31 @@ namespace CodeCosmos {
     }
 
     //% block="plant $seed"
-    export function place(seed: Seeds) {
+    export function place(seed: SeedsEN) {
         agent.setItem(SEEDS, 64, 1);
         levelCheck(seed);
     }
 
-    //% block="volgende lijn"
+    //% block="next line"
     export function nextLine() {
         agent.move(LEFT, 2)
         agent.move(BACK, 12)
     }
 
-    //% block="positie onder agent"
+    //% block="position below agent"
     export function positionBelowAgent() {
         return world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
     }
 }
 
-enum Seeds {
-    //% block="Zaadje"
+enum SeedsEN {
+    //% block="Seed"
     Seed,
-    //% block="Bloem"
+    //% block="Flower"
     Flower,
-    //% block="Pompoen"
+    //% block="Pumpkin"
     Pumpkin,
-    //% block="Chorus bloem"
+    //% block="Chorus flower"
     ChorusFlower,
     //% block="Chorus plant"
     ChorusPlant,

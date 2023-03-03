@@ -1,22 +1,4 @@
-enum Seeds {
-    //% block="Zaadje"
-    //% block.loc.nl="Zaadjes"
-    Seed,
-    //% block="Bloem"
-    //% block.loc.nl="Bloem"
-    Flower,
-    //% block="Pompoen"
-    //% block.loc.nl="Pompoen"
-    Pumpkin,
-    //% block="Chorus bloem"
-    //% block.loc.nl="Chorus Bloem"
-    ChorusFlower,
-    //% block="Chorus plant"
-    //% block.loc.nl="Chorus plant"
-    ChorusPlant,
-}
-
-function levelCheck(seed: Seeds) {
+function levelCheck(seed: Seeds | SeedsEN) {
     agent.setSlot(seed + 1)
     agent.place(DOWN)
     const detectPostion = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))

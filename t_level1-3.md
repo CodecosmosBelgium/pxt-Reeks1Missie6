@@ -5,18 +5,18 @@
 player.onChat("run", function () {
     for (let index = 0; index < 4; index++) {
         agent.move(FORWARD, 1)
-        CodeCosmos.nextLine()
+        CodeCosmosEN.nextLine()
     }
-CodeCosmos.startingPosition(world(0, 0, 0))
-CodeCosmos.place(Seeds.Seed)
-if (blocks.testForBlock(GRASS, CodeCosmos.positionBelowAgent())) {}
+CodeCosmosEN.startingPosition(world(0, 0, 0))
+CodeCosmosEN.place(Seeds.Seed)
+if (blocks.testForBlock(GRASS, CodeCosmosEN.positionBelowAgent())) {}
 
 })
 ```
 ```template
 player.onChat("level1", function () {
-CodeCosmos.startingPosition(world(0, 0, 0))
+CodeCosmosEN.startingPosition(world(0, 0, 0))
 })
 ```
 ## Velden beplanten
-Volg de instructies op het leerplatform om de opdracht op te lossen.
+Use the learning platform to solve the exercise.
