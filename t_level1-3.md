@@ -8,7 +8,7 @@ player.onChat("run", function () {
         CodeCosmosEN.nextLine()
     }
 CodeCosmosEN.startingPosition(world(0, 0, 0))
-CodeCosmosEN.place(Seeds.Seed)
+CodeCosmosEN.place(SeedsEN.Seed)
 if (blocks.testForBlock(GRASS, CodeCosmosEN.positionBelowAgent())) {}
 
 })
